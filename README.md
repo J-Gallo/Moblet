@@ -1,4 +1,4 @@
-# getUserAgent
+# get-user-agent
 
 Core components like the site Header and Footer
 
