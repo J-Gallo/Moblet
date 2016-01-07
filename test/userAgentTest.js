@@ -22,4 +22,16 @@ describe('get-user-agent', function(){
         var agent = ua.detectDevice('Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36');
         expect(agent).to.be.equal('desktop');
     });
+
+    it('check isMobile with a mobile user agent', function() {
+        var agent = ua.isMobile('Mozilla/5.0 (Linux; U; Android 4.0.3; ko-kr; LG-L160L Build/IML74K) AppleWebkit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30');
+
+        expect(agent).to.be.equal(true);
+    });
+
+    it('check isMobile with a desktop user agent', function() {
+        var agent = ua.isMobile('Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36');
+
+        expect(agent).to.be.equal(false);
+    });
 });
