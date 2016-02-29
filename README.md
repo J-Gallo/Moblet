@@ -1,9 +1,7 @@
-# get-user-agent
-
-Core components like the site Header and Footer
+# Moblet
 
 ## how to use it:
-    $ npm install git+https://git@github.com/reicko/getUserAgent.git --save-dev
+    $ npm install git+https://git@github.com/reicko/moblet.git --save-dev
     var device = require('get-user-agent'),
         test = device.detectDevice(USER AGENT);
     
