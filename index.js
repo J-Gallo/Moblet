@@ -39,3 +39,12 @@ exports.isIPhone = function(userAgent) {
 
     return ret;
 }
+
+exports.isAndroid = function(userAgent) {
+    var ua = userAgent.toLowerCase(),
+      ret;
+
+    ret = (ua.indexOf('android') > -1 ? true : false);
+
+    return ret;
+}
