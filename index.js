@@ -30,3 +30,12 @@ exports.isMobile = function(userAgent) {
 
     return ret;
 };
+
+exports.isIPhone = function(userAgent) {
+    var ua = userAgent.toLowerCase(),
+      ret;
+
+    ret = (ua.indexOf('iphone') > -1 ? true : false);
+
+    return ret;
+}
