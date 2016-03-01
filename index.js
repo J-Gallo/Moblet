@@ -31,11 +31,11 @@ exports.isMobile = function(userAgent) {
     return ret;
 };
 
-exports.isIPhone = function(userAgent) {
+exports.isIOS = function(userAgent) {
     var ua = userAgent.toLowerCase(),
       ret;
 
-    ret = (ua.indexOf('iphone') > -1 ? true : false);
+    ret = (ua.indexOf('iphone') > -1 || ua.indexOf('ipad') > -1);
 
     return ret;
 }

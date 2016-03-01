@@ -35,16 +35,21 @@ describe('get-user-agent', function(){
         expect(agent).to.be.equal(false);
     });
 
-    it('test isIPhone with an iPhone user agent', function() {
-        var agent = ua.isIPhone(' Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/48.0.2564.104 Mobile/13D15 Safari/601.1.46');
+    it('test isIOS with an iPhone user agent', function() {
+        var agent = ua.isIOS(' Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/48.0.2564.104 Mobile/13D15 Safari/601.1.46');
 
         expect(agent).to.be.equal(true);
     });
 
-    it('test isIPhone with an Android user agent', function() {
-        var agent = ua.isIPhone('Mozilla/5.0 (Linux; U; Android 4.0.3; ko-kr; LG-L160L Build/IML74K) AppleWebkit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30');
+    it('test isIOS with an Android user agent', function() {
+        var agent = ua.isIOS('Mozilla/5.0 (Linux; U; Android 4.0.3; ko-kr; LG-L160L Build/IML74K) AppleWebkit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30');
 
         expect(agent).to.be.equal(false);
+    });
+
+    it('test isIOS with an iPad user agent', function() {
+        var agent = ua.isIOS('Mozilla/5.0 (iPad; CPU OS 7_0_4 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11B554a Safari/9537.53');
+        expect(agent).to.be.equal(true);
     });
 
     it('test isAndroid with an iPhone user agent', function() {
