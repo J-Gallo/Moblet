@@ -1,7 +1,5 @@
 # Moblet
 
-## how to use it:
-
 ## Install module
     $ npm install git+https://git@github.com/J-Gallo/moblet.git --save
 
