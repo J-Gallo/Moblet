@@ -17,7 +17,7 @@
 
 ## Usage
 
-  device.detectDevice(userAgent) //return mobile, tablet, desktop
-  device.isMobile(userAgent) // return boolean
-  device.isIOS(userAgent) // return boolean
-  device.isAndroid(userAgent) // return boolean
+  * device.detectDevice(userAgent) //return mobile, tablet, desktop
+  * device.isMobile(userAgent) // return boolean
+  * device.isIOS(userAgent) // return boolean
+  * device.isAndroid(userAgent) // return boolean
