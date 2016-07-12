@@ -7,8 +7,7 @@ var detection = {
 };
 
 exports.detectDevice = function(userAgent) {
-
-    var ua = userAgent.toLowerCase(),
+    var ua = (userAgent != undefined) ? userAgent.toLowerCase() : "",
         ret;
 
     if (detection.fullPattern.test(ua) || detection.shortPattern.test(ua.substr(0,4))) {
@@ -23,28 +22,16 @@ exports.detectDevice = function(userAgent) {
 };
 
 exports.isMobile = function(userAgent) {
-    var ua = userAgent.toLowerCase(),
-        ret;
-
-    ret = (detection.fullPattern.test(ua) || detection.shortPattern.test(ua.substr(0,4)) ? true : false);
-
-    return ret;
+    var ua = (userAgent != undefined) ? userAgent.toLowerCase() : "";
+    return (detection.fullPattern.test(ua) || detection.shortPattern.test(ua.substr(0,4)) ? true : false);
 };
 
 exports.isIOS = function(userAgent) {
-    var ua = userAgent.toLowerCase(),
-      ret;
-
-    ret = (ua.indexOf('iphone') > -1 || ua.indexOf('ipad') > -1);
-
-    return ret;
-}
+    var ua = (userAgent != undefined) ? userAgent.toLowerCase() : "";
+    return (ua.indexOf('iphone') > -1 || ua.indexOf('ipad') > -1);
+};
 
 exports.isAndroid = function(userAgent) {
-    var ua = userAgent.toLowerCase(),
-      ret;
-
-    ret = (ua.indexOf('android') > -1 ? true : false);
-
-    return ret;
-}
+    var ua = (userAgent != undefined) ? userAgent.toLowerCase() : "";
+    return (ua.indexOf('android') > -1 ? true : false);
+};
