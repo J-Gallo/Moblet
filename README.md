@@ -1,10 +1,10 @@
 # Moblet
 
 ## Install module
-    $ npm install git+https://git@github.com/J-Gallo/moblet.git --save
+    $ npm install moblet --save
 
 ## Require module
-    var device = require('get-user-agent');
+    var device = require('moblet');
 
 ## Functions
 
