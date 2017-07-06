@@ -1,13 +1,13 @@
 {
-  "name": "get-user-agent",
+  "name": "moblet",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
-  "author": "Juan Gallo",
-  "license": "ISC",
+  "author": "Juan Gallo<juani.reicko@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "chai": "^3.4.1"
   }
