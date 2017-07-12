@@ -35,3 +35,8 @@ exports.isAndroid = function(userAgent) {
     var ua = (userAgent != undefined) ? userAgent.toLowerCase() : "";
     return (ua.indexOf('android') > -1 ? true : false);
 };
+
+exports.isChrome = function(userAgent) {
+    var ua = userAgent.indexOf("Chrome") > -1 && userAgent.indexOf("Edge") == -1;
+    return ua;
+}

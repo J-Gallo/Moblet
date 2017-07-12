@@ -63,4 +63,15 @@ describe('get-user-agent', function(){
 
         expect(agent).to.be.equal(true);
     });
+
+    it('test isChrome with Chrome user agent', function() {
+        var agent = ua.isChrome('Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36');
+        expect(agent).to.be.equal(true);
+    });
+
+    it('test isChrome with Edge user agent', function() {
+        var agent = ua.isChrome('Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10136');
+        expect(agent).to.be.equal(false);
+    });
+
 });
