@@ -74,4 +74,8 @@ describe('get-user-agent', function(){
         expect(agent).to.be.equal(false);
     });
 
+    it('test isChrome with Firefox user agent', function() {
+        var agent = ua.isChrome("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:44.0) Gecko/20100101 Firefox/44.0");
+        expect(agent).to.be.equal(false);
+    });
 });
